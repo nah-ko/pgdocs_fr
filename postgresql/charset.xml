@@ -529,7 +529,7 @@ SELECT * FROM test1 ORDER BY a || b COLLATE "fr_FR";
     fournit les données locales. L'un des fournisseurs standards est <literal>libc</literal>,
     qui utilise les locales fournies par la bibliothèque C du système. Ce sont les locales
     les plus utilisées par des outils du système. Un autre fournisseur est
-    <literal>icu</literal>, qui utilise la bibliothèque externe 
+    <literal>icu</literal>, qui utilise la bibliothèque externe
     ICU<indexterm><primary>ICU</primary></indexterm>. Les locales ICU peuvent
     seulement être utilisées si le support d'ICU a été configuré lors de la
     construction de PostgreSQL.
@@ -556,7 +556,7 @@ SELECT * FROM test1 ORDER BY a || b COLLATE "fr_FR";
    <para>
     Un objet de type collation fourni par <literal>icu</literal> pointe sur un collateur nommé
     fourni par la bibliothèque ICU.  ICU ne permet pas de paramétrages
-    <quote>collate</quote> et <quote>ctype</quote> séparés, ils sont donc 
+    <quote>collate</quote> et <quote>ctype</quote> séparés, ils sont donc
     toujours les mêmes. De même, les collations ICU sont indépendantes de
     l'encodage, donc il n'y a toujours qu'une seule collation ICU pour un nom donné dans une
     base de données.
@@ -676,7 +676,7 @@ SELECT a COLLATE "C" &lt; b COLLATE "POSIX" FROM test1;
     de langues BCP 47, avec une extension d'<quote>utilisation privée</quote>
     <literal>-x-icu</literal> ajoutée pour les distinguer des locales de libc.
    </para>
- 
+
    <para>
     Voici quelques exemples de collations pouvant être créées&nbsp;:
 
@@ -767,7 +767,7 @@ CREATE COLLATION german (provider = libc, locale = 'de_DE');
 
   <sect4>
    <title>Collations ICU</title>
- 
+
    <para>
     ICU permet la personnalisation des collations en dehors de l'ensemble pré-
     enregistré langue/pays, préchargé par <command>initdb</command>. Les
